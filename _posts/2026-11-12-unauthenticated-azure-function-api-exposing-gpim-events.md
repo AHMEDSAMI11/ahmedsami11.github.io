@@ -50,6 +50,9 @@ Analysis of the Vue components exposed several unauthenticated endpoints:
 | `GET` | `/api/qrm_report/{assetId}/{catalogKey}` | Fetches quality report statistics for a specific asset and catalog. |
 | `GET` | `/api/qrm_history_report_search/{assetId}` | Retrieves historical status changes for an asset. |
 
+<img width="796" height="508" alt="image" src="https://github.com/user-attachments/assets/a44e6a0e-657f-4026-8301-8b77a34cf467" />
+
+
 ---
 
 ## Proof of Concept (PoC)
