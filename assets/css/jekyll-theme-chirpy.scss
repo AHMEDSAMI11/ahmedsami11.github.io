@@ -2,48 +2,79 @@
 ---
 ---
 
-/* Load the original Chirpy theme */
+/* Load original Chirpy theme */
 @use 'main
 {%- if jekyll.environment == 'production' -%}
   .bundle
 {%- endif -%}
 ';
 
-/* =================================
-   AHMEDSOLIMAN CYBERSECURITY THEME
-   ================================= */
+/* ==========================================
+   AHMEDSOLIMAN - CYBERSECURITY CUSTOM THEME
+   ========================================== */
 
+/* Sidebar background glow */
 #sidebar {
   background:
     radial-gradient(
       circle at 50% 12%,
-      rgba(0, 145, 255, 0.16),
-      transparent 42%
+      rgba(0, 145, 255, 0.18),
+      transparent 45%
     ),
-    #17191f;
+    #17191f !important;
 }
 
+/* Anonymous profile image */
 #sidebar #avatar {
-  border: 2px solid #00c8ff;
-  border-radius: 50%;
+  width: 115px;
+  height: 115px;
+  border: 2px solid #00c8ff !important;
+  border-radius: 50% !important;
   object-fit: cover;
   box-shadow:
     0 0 12px rgba(0, 200, 255, 0.8),
-    0 0 30px rgba(0, 100, 255, 0.5);
+    0 0 25px rgba(0, 100, 255, 0.6),
+    0 0 45px rgba(100, 0, 255, 0.25);
   animation: cyberGlow 3s ease-in-out infinite alternate;
 }
 
-#sidebar .site-title {
-  text-shadow: 0 0 12px rgba(0, 160, 255, 0.4);
-}
-
+/* Avatar animation */
 @keyframes cyberGlow {
   from {
-    box-shadow: 0 0 10px #00c8ff;
+    box-shadow:
+      0 0 8px #00c8ff,
+      0 0 18px rgba(0, 100, 255, 0.4);
   }
+
   to {
     box-shadow:
-      0 0 20px #00c8ff,
-      0 0 40px #0066ff;
+      0 0 18px #00c8ff,
+      0 0 35px #0066ff,
+      0 0 50px rgba(100, 0, 255, 0.4);
   }
 }
+
+/* Profile name */
+#sidebar .site-title {
+  text-shadow:
+    0 0 8px rgba(0, 160, 255, 0.5),
+    0 0 18px rgba(0, 100, 255, 0.3);
+}
+
+/* Sidebar ambient lighting */
+#sidebar .profile-wrapper {
+  position: relative;
+}
+
+/* Links hover effect */
+#sidebar a:hover {
+  color: #00c8ff !important;
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Cybersecurity accent color */
+#sidebar .nav-link.active {
+  color: #00c8ff !important;
+}
+
