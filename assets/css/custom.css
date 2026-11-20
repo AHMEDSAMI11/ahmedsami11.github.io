@@ -45,3 +45,39 @@
   text-shadow: 0 0 12px rgba(0, 160, 255, 0.5);
 }
 
+
+/* Main website background */
+body,
+#main-wrapper {
+  background: #20212a !important;
+}
+
+/* Content area */
+#main {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(145, 125, 175, 0.07),
+      transparent 55%
+    ),
+    #20212a !important;
+}
+
+/* Article cards */
+#post-list .card-wrapper .card {
+  background: #292a35 !important;
+  border: 1px solid rgba(190, 175, 215, 0.12) !important;
+  border-radius: 14px !important;
+}
+
+/* Sidebar widgets on the right */
+#panel .access,
+#panel .post-content {
+  background: transparent !important;
+}
+
+/* Subtle hover */
+#post-list .card-wrapper .card:hover {
+  border-color: rgba(180, 155, 215, 0.35) !important;
+  transition: 0.3s ease;
+}
