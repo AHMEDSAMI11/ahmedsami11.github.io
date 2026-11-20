@@ -9,11 +9,11 @@
 {%- endif -%}
 ';
 
-/* ==========================================
-   AHMEDSOLIMAN - CYBERSECURITY CUSTOM THEME
-   ========================================== */
+/* ======================================
+   AHMEDSOLIMAN CYBERSECURITY CUSTOM STYLE
+   ====================================== */
 
-/* Sidebar background glow */
+/* Sidebar background */
 #sidebar {
   background:
     radial-gradient(
@@ -24,57 +24,54 @@
     #17191f !important;
 }
 
-/* Anonymous profile image */
-#sidebar #avatar {
-  width: 115px;
-  height: 115px;
+/* Avatar circular container */
+#sidebar a#avatar {
+  display: block !important;
+  width: 112px !important;
+  height: 112px !important;
+  min-width: 112px !important;
+  min-height: 112px !important;
+  overflow: hidden !important;
   border: 2px solid #00c8ff !important;
   border-radius: 50% !important;
-  object-fit: cover;
-  box-shadow:
-    0 0 12px rgba(0, 200, 255, 0.8),
-    0 0 25px rgba(0, 100, 255, 0.6),
-    0 0 45px rgba(100, 0, 255, 0.25);
-  animation: cyberGlow 3s ease-in-out infinite alternate;
+  animation: anonymousGlow 3s ease-in-out infinite alternate !important;
 }
 
-/* Avatar animation */
-@keyframes cyberGlow {
+/* Actual avatar GIF */
+#sidebar a#avatar img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 50% !important;
+}
+
+/* Neon animation */
+@keyframes anonymousGlow {
   from {
     box-shadow:
       0 0 8px #00c8ff,
-      0 0 18px rgba(0, 100, 255, 0.4);
+      0 0 18px rgba(0, 100, 255, 0.5);
   }
 
   to {
     box-shadow:
       0 0 18px #00c8ff,
       0 0 35px #0066ff,
-      0 0 50px rgba(100, 0, 255, 0.4);
+      0 0 50px rgba(120, 0, 255, 0.4);
   }
 }
 
 /* Profile name */
 #sidebar .site-title {
   text-shadow:
-    0 0 8px rgba(0, 160, 255, 0.5),
-    0 0 18px rgba(0, 100, 255, 0.3);
+    0 0 10px rgba(0, 180, 255, 0.6);
 }
 
-/* Sidebar ambient lighting */
-#sidebar .profile-wrapper {
-  position: relative;
-}
-
-/* Links hover effect */
-#sidebar a:hover {
+/* Navigation hover */
+#sidebar .nav-link:hover {
   color: #00c8ff !important;
-  text-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
-
-/* Cybersecurity accent color */
-#sidebar .nav-link.active {
-  color: #00c8ff !important;
-}
-
