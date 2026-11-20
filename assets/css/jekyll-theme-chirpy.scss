@@ -8,6 +8,48 @@
 {%- endif -%}
 ';
 
-/* Load custom cybersecurity styles */
-@import url('/assets/css/custom.css');
+/* AHMEDSOLIMAN CUSTOM CYBERSECURITY THEME */
 
+/* Anonymous avatar */
+#sidebar a#avatar {
+  border: 2px solid #00c8ff !important;
+  border-radius: 50% !important;
+  animation: testGlow 2s infinite alternate !important;
+  box-shadow: 0 0 20px #00c8ff !important;
+}
+
+#sidebar a#avatar img {
+  display: block !important;
+  width: 112px !important;
+  height: 112px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+}
+
+/* Avatar animation */
+@keyframes testGlow {
+  from {
+    box-shadow: 0 0 10px #00c8ff;
+  }
+  to {
+    box-shadow:
+      0 0 35px #0066ff,
+      0 0 50px rgba(0, 200, 255, 0.5);
+  }
+}
+
+/* Sidebar ambient glow */
+#sidebar {
+  background:
+    radial-gradient(
+      circle at 50% 12%,
+      rgba(0, 140, 255, 0.16),
+      transparent 45%
+    ),
+    #17191f !important;
+}
+
+/* Profile name */
+#sidebar .site-title {
+  text-shadow: 0 0 12px rgba(0, 160, 255, 0.5);
+}
