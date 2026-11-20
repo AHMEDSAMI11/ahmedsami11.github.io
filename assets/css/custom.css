@@ -1,35 +1,70 @@
 
-/* Ahmedsoliman Cybersecurity Glow */
+/* =====================================
+   AHMEDSOLIMAN - ANONYMOUS CYBER THEME
+   ===================================== */
 
-#sidebar #avatar {
-  border: 2px solid #00c8ff !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  box-shadow:
-    0 0 12px rgba(0, 200, 255, .8),
-    0 0 30px rgba(0, 100, 255, .6) !important;
-  animation: cyberGlow 3s ease-in-out infinite alternate;
-}
-
+/* Sidebar ambient background */
 #sidebar {
   background:
     radial-gradient(
       circle at 50% 12%,
-      rgba(0, 140, 255, .16),
+      rgba(0, 160, 255, 0.18),
       transparent 45%
     ),
     #17191f !important;
 }
 
-@keyframes cyberGlow {
+/* Avatar container */
+#sidebar a#avatar {
+  display: block !important;
+  width: 112px !important;
+  height: 112px !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
+  border: 2px solid #00c8ff !important;
+  box-shadow:
+    0 0 12px #00c8ff,
+    0 0 28px rgba(0, 100, 255, 0.7) !important;
+  animation: anonymousGlow 3s ease-in-out infinite alternate;
+}
+
+/* Actual GIF image */
+#sidebar a#avatar img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 50% !important;
+}
+
+/* Animated neon glow */
+@keyframes anonymousGlow {
   from {
-    filter: drop-shadow(0 0 5px #00c8ff);
+    box-shadow:
+      0 0 8px #00c8ff,
+      0 0 18px rgba(0, 100, 255, 0.5);
   }
+
   to {
-    filter: drop-shadow(0 0 18px #0066ff);
+    box-shadow:
+      0 0 18px #00c8ff,
+      0 0 35px #0066ff,
+      0 0 50px rgba(120, 0, 255, 0.4);
   }
 }
 
+/* Profile name */
 #sidebar .site-title {
-  text-shadow: 0 0 12px rgba(0, 160, 255, .5);
+  text-shadow:
+    0 0 10px rgba(0, 180, 255, 0.6);
 }
+
+/* Sidebar navigation hover */
+#sidebar .nav-link:hover {
+  color: #00c8ff !important;
+  transition: 0.3s ease;
+}
+
+@import url('/assets/css/custom.css');
