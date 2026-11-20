@@ -2,77 +2,12 @@
 ---
 ---
 
-/* Load original Chirpy theme */
 @use 'main
 {%- if jekyll.environment == 'production' -%}
   .bundle
 {%- endif -%}
 ';
 
-/* ======================================
-   AHMEDSOLIMAN CYBERSECURITY CUSTOM STYLE
-   ====================================== */
-
-/* Sidebar background */
-#sidebar {
-  background:
-    radial-gradient(
-      circle at 50% 12%,
-      rgba(0, 145, 255, 0.18),
-      transparent 45%
-    ),
-    #17191f !important;
-}
-
-/* Avatar circular container */
-#sidebar a#avatar {
-  display: block !important;
-  width: 112px !important;
-  height: 112px !important;
-  min-width: 112px !important;
-  min-height: 112px !important;
-  overflow: hidden !important;
-  border: 2px solid #00c8ff !important;
-  border-radius: 50% !important;
-  animation: anonymousGlow 3s ease-in-out infinite alternate !important;
-}
-
-/* Actual avatar GIF */
-#sidebar a#avatar img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  border-radius: 50% !important;
-}
-
-/* Neon animation */
-@keyframes anonymousGlow {
-  from {
-    box-shadow:
-      0 0 8px #00c8ff,
-      0 0 18px rgba(0, 100, 255, 0.5);
-  }
-
-  to {
-    box-shadow:
-      0 0 18px #00c8ff,
-      0 0 35px #0066ff,
-      0 0 50px rgba(120, 0, 255, 0.4);
-  }
-}
-
-/* Profile name */
-#sidebar .site-title {
-  text-shadow:
-    0 0 10px rgba(0, 180, 255, 0.6);
-}
-
-/* Navigation hover */
-#sidebar .nav-link:hover {
-  color: #00c8ff !important;
-  transition: color 0.3s ease;
-}
+/* Load custom cybersecurity styles */
 @import url('/assets/css/custom.css');
+
