@@ -1,0 +1,35 @@
+
+/* Ahmedsoliman Cybersecurity Glow */
+
+#sidebar #avatar {
+  border: 2px solid #00c8ff !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  box-shadow:
+    0 0 12px rgba(0, 200, 255, .8),
+    0 0 30px rgba(0, 100, 255, .6) !important;
+  animation: cyberGlow 3s ease-in-out infinite alternate;
+}
+
+#sidebar {
+  background:
+    radial-gradient(
+      circle at 50% 12%,
+      rgba(0, 140, 255, .16),
+      transparent 45%
+    ),
+    #17191f !important;
+}
+
+@keyframes cyberGlow {
+  from {
+    filter: drop-shadow(0 0 5px #00c8ff);
+  }
+  to {
+    filter: drop-shadow(0 0 18px #0066ff);
+  }
+}
+
+#sidebar .site-title {
+  text-shadow: 0 0 12px rgba(0, 160, 255, .5);
+}
